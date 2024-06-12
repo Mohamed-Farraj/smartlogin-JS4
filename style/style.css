@@ -18,6 +18,10 @@ form {
   background-color: transparent !important;
   color: white !important;
 }
+form input{
+    height: fit-content !important;
+    padding-block: 0px !important;
+}
 .pass label
 {
     right: .8rem;
@@ -25,6 +29,8 @@ form {
 @media screen and (min-width: 1200px) {
   form {
     width: 50%;
+    z-index: 2;
     border: solid 1px;
   }
+  
 }
