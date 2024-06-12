@@ -1,5 +1,6 @@
 let validatoru = false;
 let validatore = false;
+let rmsg = document.getElementById('stateMsg');
 let eye = document.getElementById('eye');
 let registere = document.getElementById('registere')
 let check = document.getElementById('btn-check-4');
@@ -105,14 +106,13 @@ check.addEventListener('change', function(){
         passwordInput.setAttribute('type','text');
         eye.classList.replace('fa-eye-slash','fa-eye');
         eye.classList.add('text-primary')
-        eye.classList.remove('text-white');
+        // eye.classList.remove('text-white');
         }
     else
         {
             passwordInput.setAttribute('type','password');
             eye.classList.replace('fa-eye','fa-eye-slash');
             eye.classList.remove('text-primary');
-            eye.classList.add('text-white');
         }
 } )
 passwordInput.addEventListener('input',function(){
@@ -141,6 +141,15 @@ passwordInput.addEventListener('input',function(){
 document.getElementById('form').addEventListener('submit',function(e){
     e.preventDefault();
     console.log(validatoru,validatore);
+    if(validatoru && validatore)
+        {
+            
+            rmsg.innerHTML =`<span class="text-primary"><i class="fa-solid fa-check"></i> Success you can login now</span>`
+        }
+    else
+    {
+        rmsg.innerHTML =`<span class="text-danger"><i class="fa-solid fa-xmark"></i> adhere to guidelines consistently</span>`
+    }
 })
 // registere.addEventListener('submit',function(e){
 //     e.preventDefault();

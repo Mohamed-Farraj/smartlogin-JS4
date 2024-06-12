@@ -5,8 +5,8 @@ body {
   background: linear-gradient(
     90deg,
     rgba(71, 101, 210, 1) 0%,
-    rgba(38, 53, 93, 1) 20%,
-    rgba(38, 53, 93, 1) 80%,
+    rgb(18, 25, 44) 10%,
+    rgb(27, 36, 59) 90%,
     rgba(71, 101, 210, 1) 100%
   );
 }
@@ -17,6 +17,10 @@ body {
 form {
   background-color: transparent !important;
   color: white !important;
+}
+.pass label
+{
+    right: .8rem;
 }
 @media screen and (min-width: 1200px) {
   form {

@@ -12,58 +12,57 @@
     <div
       class="container h-100 d-flex justify-content-center align-items-center"
     >
-      <form id="form" class="fs-2 px-sm-2 p-lg-4  position-relative rounded-2">
-        <div class="mb-4">
-          <label for="username" class="form-label">username</label>
+      <form id="form" class="fs-2 p-5 position-relative rounded-2">
+        <div class="mb-3">
           <input
             id="username"
             type="text"
             class="fs-3 form-control"
             id="exampleInputPassword1"
+            placeholder="Username"
             required
           />
-          <div id="usernameruleC" class="fs-4">
+          <div id="usernameruleC" class="fs-5">
             <i class="fa-solid fa-caret-right"></i> First letter must be capital
           </div>
-          <div id="usernameruleS" class="fs-4">
+          <div id="usernameruleS" class="fs-5">
             <i class="fa-solid fa-caret-right"></i> spaces not allowed
           </div>
         </div>
 
-        <div class="mb-4">
-          <label for="email" class="form-label">Email address</label>
+        <div class="mb-3">
           <input
             id="email"
             type="email"
             class="fs-3 form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            placeholder="Email address"
             required
           />
-          <div id="emailrules" class="fs-4">
+          <div id="emailrules" class="fs-5">
             <i class="fa-solid fa-caret-right"></i> email address must be valid one
           </div>
         </div>
 
-        <div class="mb-4">
-          <label for="password" class="form-label">Password</label>
-          <div class="pass d-flex align-items-center column-gap-2">
-            <input required id="password" type="password" class="fs-3 form-control" />
+        <div class="mb-3">
+          <div class="pass d-flex align-items-center position-relative">
+            <input required placeholder="Password" id="password" type="password" class="fs-3 form-control" />
             <input
               type="checkbox"
               class="btn-check"
               id="btn-check-4"
               autocomplete="off"
             />
-            <label class="btn fs-2" for="btn-check-4">
+            <label class="btn p-0 fs-2 bg-transparent position-absolute " for="btn-check-4">
                 <i
                   id="eye"
-                  class="fa fa-eye-slash cursor-pointer text-white"
+                  class="fa fa-eye-slash cursor-pointer"
                   aria-hidden="true"
                 ></i>
             </label>
           </div>
-          <div id="passwordrule" class="fs-4">
+          <div id="passwordrule" class="fs-5">
             <i class="fa-solid fa-caret-right"></i>
             use hard one
           </div>
@@ -72,15 +71,12 @@
         <button
           id="registere"
           type="submit"
-          class="fs-2 btn btn-primary w-50 m-auto d-block mb-4"
+          class="fs-2 btn btn-primary w-50 m-auto d-block mb-3"
         >
           Registere
         </button>
-        <div class="stateMsg text-center">
-            <!-- <span class="text-primary"><i class="fa-solid fa-check"></i> Success you can login now</span>
-            <span class="text-danger"><i class="fa-solid fa-xmark"></i> adhere to guidelines consistently</span> -->
-        </div>
-        <span class="text-center d-block">already have account? <a href="">login</a></span>
+        <div id="stateMsg" class="text-center"></div>
+        <span class="text-center d-block fs-5">already have account? <a href="">login</a></span>
       </form>
     </div>
     <script src="script/script.js"></script>
