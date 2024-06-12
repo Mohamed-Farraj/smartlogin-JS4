@@ -75,6 +75,7 @@ usernameInput.addEventListener("input", function () {
 let emailregex = new RegExp("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
 email.addEventListener("input", function () {
   console.log(this.value);
+  if(users.length==0){dublicatEmail=true}
   for (let i = 0; i < users.length; i++) {
     if(users[i].email === this.value)
         {
