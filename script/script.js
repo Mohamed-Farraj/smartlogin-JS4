@@ -80,12 +80,16 @@ email.addEventListener("input", function () {
         {
             console.log("اييييييييييييييه بقا");
             dublicatEmail=false;
+            break;
         }
         else
         {
             dublicatEmail=true;
         }
+        console.log(dublicatEmail);
   }
+  console.log(dublicatEmail);
+  
   if (this.value == "") {
     console.log("ايه بقا");
     emailrule.classList.remove("text-primary", "text-danger");
@@ -103,13 +107,16 @@ email.addEventListener("input", function () {
     emailrule.innerHTML = `<i class="fa-solid fa-xmark"></i> this email is not valid one`;
     validatore = false;
   }
-    if (!dublicatEmail) {
-    emailrule.classList.add("text-danger");
-    emailrule.classList.remove("text-primary");
-    emailrule.innerHTML = `<i class="fa-solid fa-xmark"></i> this email is used before use another one`;
-    validatore = false;
-  }
+  if (dublicatEmail == false) {
+    console.log("اااااااااااااااااااااا ")
+emailrule.classList.add("text-danger");
+emailrule.classList.remove("text-primary");
+emailrule.innerHTML = `<i class="fa-solid fa-xmark"></i> this email is used before use another one`;
+validatore = false;
+}
+  
 });
+
 //@@@@@@@@@@@@@@@@@@ email functions @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 //***********************password functions*************************
