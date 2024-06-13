@@ -9,26 +9,52 @@
     <title>smart login</title>
   </head>
   <body>
-    <div class="container h-100 d-flex justify-content-center align-items-center">
-      <form class="w-50 form-control fs-2 p-3">
+    <div
+      class="container h-100 d-flex justify-content-center align-items-center position-relative"
+    >
+    <div class="bo position-absolute"></div>
+      <form id="form" class="fs-2 p-5 position-relative rounded-2 border-0">
+        <div class="mb-3">
+          <input
+            id="email"
+            type="email"
+            class="fs-3 form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email address"
+          />
+        </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input id="email" type="email" class="fs-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="mb-3">
+          <div class="pass d-flex align-items-center position-relative">
+            <input placeholder="Password" id="password" type="password" class="fs-3 form-control" />
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btn-check-4"
+              autocomplete="off"
+            />
+            <label class="btn p-0 fs-2 bg-transparent position-absolute " for="btn-check-4">
+                <i
+                  id="eye"
+                  class="fa fa-eye-slash cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+            </label>
           </div>
+        </div>
 
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <div class="pass d-flex align-items-center column-gap-2">
-                <input id="password" type="password" class="fs-3 form-control" id="exampleInputPassword1">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-          </div>
-
-          <button type="submit" class="fs-2 btn btn-outline-primary w-50 m-auto d-block">Login</button>
-        </form>
+        <button
+          id="registere"
+          type="submit"
+          class="fs-2 btn btn-primary w-50 m-auto d-block mb-3"
+        >
+          Login
+        </button>
+        <div id="stateMsg" class="text-center d-none"></div>
+        <span class="text-center d-block fs-5">already have account? <a href="signup.html">registere</a></span>
+      </form>
     </div>
-    
-    <script src="script/script.js"></script>
+    <script src="script/scriptlogin.js"></script>
   </body>
 </html>

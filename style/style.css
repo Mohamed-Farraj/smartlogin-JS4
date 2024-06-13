@@ -29,8 +29,16 @@ form input{
 @media screen and (min-width: 1200px) {
   form {
     width: 50%;
-    z-index: 2;
     border: solid 1px;
+    z-index: 5;
   }
-  
+  .bo{
+    border:solid 1px white;
+    width: 40rem;
+    height: 40rem;
+    transform: rotate(45deg);
+    top: 10rem;
+    left: 21rem;
+    z-index: 1;
+  }
 }

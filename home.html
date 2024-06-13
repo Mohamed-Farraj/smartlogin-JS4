@@ -7,16 +7,32 @@
     <link rel="stylesheet" href="style/all.min.css" />
     <link rel="stylesheet" href="style/style.css" />
     <title>smart login</title>
+    <style>
+      body{
+        background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: center center;
+        background-attachment: cover;
+      }
+      .greeting{
+        border: white solid 1px;
+        background-color: rgba(0, 0, 0, 0.61);
+        width: 25rem;
+        height: 25rem;
+      }
+    </style>
   </head>
   <body>
     <div class="container h-100 d-flex justify-content-center align-items-center">
       <div
-        class="greeting d-flex flex-column bg-info justify-content-evenly align-items-center rounded-circle"
+        class="greeting d-flex flex-column text-white justify-content-center align-items-center rounded-circle"
       >
         <h1>Welcome</h1>
-        <h2 class="h1">20char</h2>
+        <h2 id="h2" class="h1"></h2>
       </div>
     </div>
-    <script src="script/script.js"></script>
+    <script>
+      console.log(localStorage.getItem('un'));
+      document.getElementById('h2').innerHTML=localStorage.getItem('un');
+    </script>
   </body>
 </html>
