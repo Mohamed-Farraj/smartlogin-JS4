@@ -31,7 +31,8 @@ console.log(users);
 usernameRegex = new RegExp("^[A-Z][^s]*$", "gm");
 firstletterRegex = new RegExp("^[A-Z]", "gm");
 usernameInput.addEventListener("input", function () {
-  if (!usernameRegex.test(this.value)) {
+  console.log('test spaces',this.value);
+  if (!usernameRegex.test(this.value) || usernameInput.value.includes(' ')) {
     validatoru = false;
     if (this.value.includes(" ")) {
       nospaces.innerHTML = `<i class="fa-solid fa-xmark"></i> spaces not allowed`;
@@ -58,7 +59,8 @@ usernameInput.addEventListener("input", function () {
       nospaces.classList.remove("text-primary", "text-danger");
       validatoru = false;
     }
-  } else {
+  } if(firstletterRegex.test(this.value) && !usernameInput.value.includes(' ')){
+    console.log('need to repair ASAP');
     validatoru = true;
     capitalletter.innerHTML = `<i class="fa-solid fa-check"></i>  First letter must be capital`;
     nospaces.innerHTML = `<i class="fa-solid fa-check"></i> spaces not allowed`;
