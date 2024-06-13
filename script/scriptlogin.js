@@ -17,7 +17,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
         passwordInput.value = "";
         err = false;
         localStorage.setItem('un',accounts[i].username);
-        window.location.href = "../home.html";
+        window.location.href = "./home.html";
         break;
       }
     }
