@@ -31,8 +31,14 @@ console.log(users);
 usernameRegex = new RegExp("^[A-Z][^s]*$", "gm");
 firstletterRegex = new RegExp("^[A-Z]", "gm");
 usernameInput.addEventListener("input", function () {
-  console.log('test spaces',this.value);
-  if (!usernameRegex.test(this.value) || usernameInput.value.includes(' ')) {
+  console.log('my input:',this.value);
+  let resflr = firstletterRegex.test(this.value);
+  console.log("first letter regex:",resflr);
+  console.log("first letter regex condition with variable:",resflr === false);
+  console.log("first letter regex condition without variable:",firstletterRegex.test(this.value) === false);
+  console.log("usernameInput.value.includes(' ')",this.value.includes(' '));
+  if (resflr === false || this.value.includes(' ')) {
+    console.log("there is issu in username ");
     validatoru = false;
     if (this.value.includes(" ")) {
       nospaces.innerHTML = `<i class="fa-solid fa-xmark"></i> spaces not allowed`;
@@ -59,8 +65,10 @@ usernameInput.addEventListener("input", function () {
       nospaces.classList.remove("text-primary", "text-danger");
       validatoru = false;
     }
-  } if(firstletterRegex.test(this.value) && !usernameInput.value.includes(' ')){
-    console.log('need to repair ASAP');
+  } 
+  console.log("firstletterRegex.test(this.value)",firstletterRegex.test(this.value),"!usernameInput.value.includes(' ')",!usernameInput.value.includes(' '));
+  if(resflr && !usernameInput.value.includes(' ')){
+    console.log("firstletterRegex.test(this.value)",firstletterRegex.test(this.value),"!usernameInput.value.includes(' ')",!usernameInput.value.includes(' '));
     validatoru = true;
     capitalletter.innerHTML = `<i class="fa-solid fa-check"></i>  First letter must be capital`;
     nospaces.innerHTML = `<i class="fa-solid fa-check"></i> spaces not allowed`;
@@ -168,6 +176,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     passwordInput.value="";
     validatoru=false;
     validatore=false;
+    window.location.href="../index.html";
   } else {
     rmsg.innerHTML = `<span class="text-danger"><i class="fa-solid fa-xmark"></i> adhere to guidelines consistently</span>`;
   }

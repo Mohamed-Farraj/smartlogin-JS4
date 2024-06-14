@@ -30,7 +30,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   if(err){
       rmsg.innerHTML = `<span class="text-danger fs-3"><i class="fa-solid fa-xmark"></i> somthing wrong in email or password</span>`;
   }
-  if(email.value=="" || passwordInput.value=="" && err)
+  if((email.value=="" || passwordInput.value=="") && err)
     {
         rmsg.innerHTML = `<span class="text-danger"><i class="fa-solid fa-xmark"></i> fill all inputs</span>`;
 
