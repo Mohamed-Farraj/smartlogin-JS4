@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/all.min.css">
+    <link rel="stylesheet" href="/style/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <input type="email" class="form-control" id="name" placeholder="enter your name">
+          </div>
+    </div>
+    <script>
+  firstletterRegex = new RegExp("^[A-Z][a-z]*", "gm");
+  let string;
+  let regVar;
+  document.getElementById('name').addEventListener("input", function () {
+    string = document.getElementById('name').value
+    regVar = firstletterRegex.test(string);
+  console.log("-------------------new input----------------------");
+  console.log('my input:',string);
+  console.log("first letter regex WITHOUT(var)",firstletterRegex.test(string));
+  console.log("first letter regex WITHOUT(var)",firstletterRegex.test(string));
+  console.log("first letter regex WITHOUT(var)",firstletterRegex.test(string));
+  console.log("first letter regex WITHOUT(var)",firstletterRegex.test(string));
+  console.log("first letter regex (var)",regVar);
+        })
+    </script>
+</body>
+</html>

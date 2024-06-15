@@ -32,10 +32,10 @@ usernameRegex = new RegExp("^[A-Z][^s]*$", "gm");
 firstletterRegex = new RegExp("^[A-Z]", "gm");
 usernameInput.addEventListener("input", function () {
   console.log('my input:',this.value);
-  let resflr = firstletterRegex.test(this.value);
-  console.log("first letter regex:",resflr);
-  console.log("first letter regex condition with variable:",resflr === false);
-  console.log("first letter regex condition without variable:",firstletterRegex.test(this.value) === false);
+  // let resflr = firstletterRegex.test(this.value);
+  let resflr = this.value.charCodeAt(0) >= 65 && this.value.charCodeAt(0) <= 90;
+  console.log("first letter regex (var):",resflr);
+  console.log("first letter regex (var):",resflr);
   console.log("usernameInput.value.includes(' ')",this.value.includes(' '));
   if (resflr === false || this.value.includes(' ')) {
     console.log("there is issu in username ");
