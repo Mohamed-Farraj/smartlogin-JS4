@@ -176,7 +176,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     passwordInput.value="";
     validatoru=false;
     validatore=false;
-    window.location.href="/index.html";
+    window.location.href="./index.html";
   } else {
     rmsg.innerHTML = `<span class="text-danger"><i class="fa-solid fa-xmark"></i> adhere to guidelines consistently</span>`;
   }
